@@ -8,6 +8,6 @@ jobs:
     - name: test
       run: |
         curl \
-        --url https://api.github.com/repos/${{ github.repository }} \
-        --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-        --header 'content-type: application/json'
+        -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+        -H "Accept: application/vnd.github.machine-man-preview+json" \
+        https://api.github.com/installation/repositories | head`)
