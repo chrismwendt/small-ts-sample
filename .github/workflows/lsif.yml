@@ -10,4 +10,4 @@ jobs:
         curl \
         -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
         -H "Accept: application/vnd.github.machine-man-preview+json" \
-        https://api.github.com/installation/repositories | head`)
+        https://api.github.com/installation/repositories | head
